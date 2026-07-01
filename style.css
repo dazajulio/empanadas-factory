@@ -74,13 +74,15 @@ body {
     font-size: 1.8rem;
     font-weight: 900;
     letter-spacing: -1px;
+    color: white;
+    transition: var(--transition);
 }
 
 .red { color: var(--brand-red); }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-dark);
+    color: white;
     margin-left: 3rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -89,6 +91,18 @@ body {
 }
 
 .nav-links a:hover {
+    color: var(--brand-red);
+}
+
+#navbar.scrolled .logo {
+    color: var(--text-dark);
+}
+
+#navbar.scrolled .nav-links a {
+    color: var(--text-dark);
+}
+
+#navbar.scrolled .nav-links a:hover {
     color: var(--brand-red);
 }
 
@@ -110,14 +124,43 @@ body {
     padding: 0 10%;
 }
 
-.hero-bg-video {
+.hero-bg-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center center;
     z-index: -2;
+}
+
+.hero-locations {
+    position: absolute;
+    bottom: 2rem;
+    left: 10%;
+    display: flex;
+    gap: 1.5rem;
+    z-index: 2;
+    flex-wrap: wrap;
+}
+
+.hero-loc {
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-loc i {
+    color: var(--brand-red-light);
 }
 
 .hero-overlay {
@@ -184,7 +227,7 @@ body {
 
 /* --- Storytelling --- */
 .storytelling {
-    padding: 10rem 0;
+    padding: 5rem 0;
     background: var(--bg-offwhite);
 }
 
@@ -564,4 +607,13 @@ footer {
     .btn-main-red, .btn-outline-white { width: 100%; text-align: center; }
     .splash-content .logo { font-size: 2.5rem; }
     .section-title { font-size: 2.2rem !important; }
+    .hero-locations {
+        left: 5%;
+        bottom: 1rem;
+        gap: 0.5rem;
+    }
+    .hero-loc {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
 }

@@ -46,17 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // 2. Parallax Effects
-        const heroBg = document.querySelector('.hero-bg-parallax');
         const qualityBg = document.querySelector('.quality-bg-parallax');
-        const floatingEmpanada = document.querySelector('.hero-empanada-float');
-        
-        if (heroBg) {
-            heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
-        }
-        
-        if (floatingEmpanada) {
-            floatingEmpanada.style.transform = `translateY(${scrolled * -0.1}px) rotate(${scrolled * 0.02}deg)`;
-        }
 
         if (qualityBg) {
             const qualitySection = document.querySelector('.quality');
@@ -84,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, revealOptions);
 
     // Prepare elements for reveal
-    const revealElements = document.querySelectorAll('.story-image-container, .story-content, .quality-card, .section-title, .hero-content, .award-card, .video-wrapper');
+    const revealElements = document.querySelectorAll('.story-image-container, .story-content, .quality-card, .section-title, .hero-content, .award-card, .video-wrapper, .location-card');
     
     revealElements.forEach(el => {
         el.classList.add('reveal-init');

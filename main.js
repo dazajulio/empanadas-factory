@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, revealOptions);
 
     // Prepare elements for reveal
-    const revealElements = document.querySelectorAll('.story-image-container, .story-content, .quality-card, .section-title, .hero-content, .award-card, .video-mockup');
+    const revealElements = document.querySelectorAll('.story-image-container, .story-content, .quality-card, .section-title, .hero-content, .award-card, .video-wrapper');
     
     revealElements.forEach(el => {
         el.classList.add('reveal-init');
@@ -126,11 +126,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Video Play Interaction Mockup
-    const videoBtns = document.querySelectorAll('.video-trigger');
-    videoBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            alert('Aquí se reproduciría el video de la historia de Empanadas Factory.');
-        });
-    });
+    // The native <video> elements handle their own play interactions now.
 });

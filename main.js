@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, revealOptions);
 
     // Prepare elements for reveal
-    const revealElements = document.querySelectorAll('.story-image-container, .story-content, .quality-card, .section-title, .hero-content, .award-card, .video-wrapper, .location-card');
+    const revealElements = document.querySelectorAll('.quality-card, .award-card, .video-wrapper, .location-card');
     
     revealElements.forEach(el => {
         el.classList.add('reveal-init');

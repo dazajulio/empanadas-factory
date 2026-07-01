@@ -151,16 +151,34 @@ body {
     font-weight: 700;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.6rem 1.2rem;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.8rem 1.2rem;
     border-radius: 8px;
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.loc-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.loc-details strong {
+    font-size: 1.05rem;
+    color: white;
+    line-height: 1.2;
+}
+
+.loc-details span {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+}
+
 .hero-loc i {
     color: var(--brand-red-light);
+    font-size: 1.5rem;
 }
 
 .hero-overlay {

@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "name": "empanadas-factory-landing",
+  "cleanUrls": true,
+  "framework": null,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}

@@ -127,6 +127,7 @@ body {
     padding: 0 10%;
 }
 
+.hero-bg-video,
 .hero-bg-image {
     position: absolute;
     top: 0;

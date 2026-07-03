@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   description: 'Descubre el crujido de la tradición. Elevamos la tradición venezolana a una experiencia de lujo.',
 }
 
+import { CartProvider } from '@/context/CartContext'
+
 export default function RootLayout({
   children,
 }: {
@@ -19,7 +21,11 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
-      <body>{children}</body>
+      <body>
+        <CartProvider>
+            {children}
+        </CartProvider>
+      </body>
     </html>
   )
 }

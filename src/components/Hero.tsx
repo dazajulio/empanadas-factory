@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Hero() {
   return (
     <header id="hero" className="hero">
@@ -7,8 +9,8 @@ export default function Hero() {
             <h1 className="split-text">LA HISTORIA <br/>NO SE SABORIZA, <br/><span className="red-text">SE HEREDA.</span></h1>
             <p>Bienvenidos a la cuna de la Empanada de Pabellón Original. Desde 1972, definiendo el crunch de Venezuela.</p>
             <div className="hero-actions">
-                <a href="https://www.ubereats.com/store/empanadas-factory-doral/G4U9QDnoXU2xnprnNBb_Og" target="_blank" className="btn-main-red" rel="noreferrer">Descubre el Legado</a>
-                <a href="#storytelling" className="btn-outline-white">Nuestra Historia</a>
+                <Link href="/menu" className="btn-main-red">Hacer un Pedido</Link>
+                <Link href="/#storytelling" className="btn-outline-white">Nuestra Historia</Link>
             </div>
         </div>
         {/* Hero Locations */}

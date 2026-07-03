@@ -1,6 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
 
+import Link from 'next/link';
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -15,15 +17,15 @@ export default function Navbar() {
   return (
     <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
       <div className="nav-container">
-        <div className="logo">
+        <Link href="/" className="logo" style={{textDecoration: 'none'}}>
           <span className="red">EMPANADAS</span>FACTORY
-        </div>
+        </Link>
         <div className="nav-links">
-          <a href="#hero">Inicio</a>
-          <a href="#storytelling">Historia</a>
-          <a href="#proceso">Calidad</a>
-          <a href="#menu">Menú</a>
-          <a href="https://www.ubereats.com/store/empanadas-factory-doral/G4U9QDnoXU2xnprnNBb_Og?srsltid=AfmBOopMAkjIwFLyHSY2XjYcTTgee9GuUted4hqSX3p2EzLrhPVL-guy" target="_blank" className="btn-red" rel="noreferrer">¡Pide Ahora!</a>
+          <Link href="/#hero">Inicio</Link>
+          <Link href="/#storytelling">Historia</Link>
+          <Link href="/#proceso">Calidad</Link>
+          <Link href="/menu">Menú</Link>
+          <Link href="/menu" className="btn-red">¡Pide Ahora!</Link>
         </div>
       </div>
     </nav>

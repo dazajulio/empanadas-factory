@@ -13,29 +13,41 @@ export default function Hero() {
                 <Link href="/#storytelling" className="btn-outline-white">Nuestra Historia</Link>
             </div>
         </div>
+        
+        {/* Uber Eats Action Button */}
+        <a 
+            href="https://www.ubereats.com/store/empanadas-factory-doral/G4U9QDnoXU2xnprnNBb_Og?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjEyNjAxJTIwV2VzdGVybiUyMEF2ZSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjU0NGNjZjljLWIwNWUtOTdjYi03ZTQ4LWViYTlhNGM3YTBkZiUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDEuNjY0MzUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTg3LjY3OTg1NCU3RA%3D%3D&ps=1&from_challenge=1" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="uber-eats-btn shadow-large"
+        >
+            <img src="/assets/Uber-Eats-Logo-1.jpg" alt="Uber Eats" />
+            <span>Delivery</span>
+        </a>
+
         {/* Hero Locations */}
         <div className="hero-locations">
-            <div className="hero-loc">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=6475+NW+87th+Ave,+Miami,+FL" target="_blank" rel="noopener noreferrer" className="hero-loc" style={{textDecoration: 'none', color: 'inherit'}}>
                 <i className="fas fa-map-marker-alt"></i> 
                 <div className="loc-details">
                     <strong>Doral</strong>
                     <span>6475 NW 87th Ave, Miami</span>
                 </div>
-            </div>
-            <div className="hero-loc">
+            </a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=4401+NW+2nd+Ave,+Miami,+FL" target="_blank" rel="noopener noreferrer" className="hero-loc" style={{textDecoration: 'none', color: 'inherit'}}>
                 <i className="fas fa-map-marker-alt"></i> 
                 <div className="loc-details">
                     <strong>Wynwood</strong>
                     <span>4401 NW 2nd Ave, Miami</span>
                 </div>
-            </div>
-            <div className="hero-loc">
+            </a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=6868+SW+8th+St,+Miami,+FL" target="_blank" rel="noopener noreferrer" className="hero-loc" style={{textDecoration: 'none', color: 'inherit'}}>
                 <i className="fas fa-map-marker-alt"></i> 
                 <div className="loc-details">
                     <strong>Calle Ocho</strong>
                     <span>6868 SW 8th St, Miami</span>
                 </div>
-            </div>
+            </a>
         </div>
     </header>
   );

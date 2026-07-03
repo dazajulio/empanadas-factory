@@ -19,7 +19,7 @@ export default function Storytelling() {
               </div>
               <div className="story-image-container" style={{textAlign: 'center'}}>
                   {/* Placeholder for the diploma image */}
-                  <video src="/assets/Conoce más sobre nuestra historia.mp4" poster="/assets/anavictoria.jpg" controls preload="metadata" className="rounded-image shadow-large" style={{maxWidth: '80%', margin: '0 auto', display: 'block'}}></video>
+                  <video src="/assets/Conoce más sobre nuestra historia.mp4#t=0.001" controls preload="metadata" className="rounded-image shadow-large" style={{maxWidth: '80%', margin: '0 auto', display: 'block'}}></video>
               </div>
           </div>
           

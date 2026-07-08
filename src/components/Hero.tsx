@@ -3,14 +3,14 @@ import Link from 'next/link';
 export default function Hero() {
   return (
     <header id="hero" className="hero">
-        <img className="hero-bg-image" src="/assets/HERO IMAGE.png" alt="Fondo Empanadas Factory" />
+        <img className="hero-bg-image" src="/assets/HERO2_v5.png" alt="Fondo Empanadas Factory" />
         <div className="hero-overlay"></div>
         <div className="hero-content">
-            <h1 className="split-text">LA HISTORIA <br/>NO SE SABORIZA, <br/><span className="red-text">SE HEREDA.</span></h1>
+            <h1 className="split-text"><span style={{ color: 'black' }}>EL AUTÉNTICO SABOR QUE CREÓ</span> <br/><span style={{ color: 'var(--brand-red)' }}>UNA LEYENDA</span></h1>
             <p>Bienvenidos a la cuna de la Empanada de Pabellón Original. Desde 1972, definiendo el crunch de Venezuela.</p>
             <div className="hero-actions">
                 <Link href="/menu" className="btn-main-red">Hacer un Pedido</Link>
-                <Link href="/#storytelling" className="btn-outline-white">Nuestra Historia</Link>
+                <Link href="/#storytelling" className="btn-black">Nuestra Historia</Link>
             </div>
         </div>
         

@@ -10,7 +10,7 @@ export default function Quality() {
                 
                 {/* Contenido y Reviews del lado derecho */}
                 <div className="quality-content">
-                    <h2 className="title-large" style={{color: 'var(--brand-red-dark)', marginBottom: '1rem', lineHeight: '1.1'}}>EL VEREDICTO DE <br/>LA <span className="red">CALLE</span></h2>
+                    <h2 className="title-large" style={{color: 'var(--brand-red-dark)', marginBottom: '1rem', lineHeight: '1.1'}}>EL VEREDICTO DE <br/>NUESTROS <span className="red">CLIENTES</span></h2>
                     <p style={{fontSize: '1.2rem', marginBottom: '3rem', color: 'var(--text-charcoal)'}}>No lo decimos nosotros. Lo confirman quienes ya han experimentado el verdadero crunch de Venezuela en cada mordisco.</p>
                     
                     <div className="quality-grid-2x2">

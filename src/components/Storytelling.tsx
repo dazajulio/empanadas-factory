@@ -2,8 +2,6 @@
 import { useState } from 'react';
 
 export default function Storytelling() {
-  const [modalImage, setModalImage] = useState<string | null>(null);
-
   return (
     <>
       <section id="storytelling" className="storytelling">
@@ -40,7 +38,7 @@ export default function Storytelling() {
                               <p>Barquisimeto, 1984</p>
                           </div>
                           <div className="award-back">
-                              <img src="/assets/dimploma3.jpg" alt="Diploma 1984" onClick={() => setModalImage('/assets/dimploma3.jpg')} />
+                              <img src="/assets/dimploma3.jpg" alt="Diploma 1984" />
                           </div>
                       </div>
                   </div>
@@ -52,7 +50,7 @@ export default function Storytelling() {
                               <p>Barquisimeto, 1985</p>
                           </div>
                           <div className="award-back">
-                              <img src="/assets/diploma original.png" alt="Diploma 1985" onClick={() => setModalImage('/assets/diploma original.png')} />
+                              <img src="/assets/diploma original.png" alt="Diploma 1985" />
                           </div>
                       </div>
                   </div>
@@ -64,7 +62,7 @@ export default function Storytelling() {
                               <p>Venezuela, 1986</p>
                           </div>
                           <div className="award-back">
-                              <img src="/assets/diploma2.jpg" alt="Diploma 1986" onClick={() => setModalImage('/assets/diploma2.jpg')} />
+                              <img src="/assets/diploma2.jpg" alt="Diploma 1986" />
                           </div>
                       </div>
                   </div>
@@ -91,15 +89,6 @@ export default function Storytelling() {
           </div>
       </section>
 
-      {/* Image Modal */}
-      {modalImage && (
-        <div className="image-modal-overlay" onClick={() => setModalImage(null)}>
-            <div className="image-modal-content" onClick={e => e.stopPropagation()}>
-                <span className="close-modal" onClick={() => setModalImage(null)}>&times;</span>
-                <img src={modalImage} alt="Diploma Ampliado" />
-            </div>
-        </div>
-      )}
     </>
   );
 }

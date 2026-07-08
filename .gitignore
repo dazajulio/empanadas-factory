@@ -8,8 +8,6 @@
 
 # next.js
 /.next/
-/out/
-out.zip
 build
 
 # misc
@@ -26,3 +24,4 @@ yarn-error.log*
 
 # vercel
 .vercel
+out.zip  

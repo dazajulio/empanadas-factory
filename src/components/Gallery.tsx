@@ -8,6 +8,10 @@ export default function Gallery() {
             <img src="/assets/anavictoria.jpg" alt="Vibe 4" />
             <img src="/assets/empanada1.jpg" alt="Vibe 5" />
             <img src="/assets/trailer1.jpg" alt="Vibe 6" />
+            <img src="/assets/ORI.jpg" alt="Vibe 7" />
+            <img src="/assets/rctv.jpg" alt="Vibe 8" />
+            <img src="/assets/empanada7.jpg" alt="Vibe 9" />
+            <img src="/assets/empanadas.png" alt="Vibe 10" />
         </div>
     </section>
   );

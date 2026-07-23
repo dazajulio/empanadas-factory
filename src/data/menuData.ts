@@ -18,10 +18,10 @@ export const menuData: MenuCategory[] = [
     id: "mayorista",
     title: "DISTRIBUCIÓN AL MAYOR",
     items: [
-      { id: "m1", name: "Empanadas Picnic de Carne Molida", description: "Caja x 50 unidades. Empanadas precocidas listas para freír o calentar.", price: 0, image: "/assets/empanadas.png", popular: true },
-      { id: "m2", name: "Empanadas Picnic de Queso", description: "Caja x 50 unidades. Empanadas precocidas listas para freír o calentar.", price: 0, image: "/assets/empanadas.png" },
-      { id: "m3", name: "Empanadas Picnic de Pollo", description: "Caja x 50 unidades. Empanadas precocidas listas para freír o calentar.", price: 0, image: "/assets/empanadas.png" },
-      { id: "m4", name: "Empanadas Picnic de Cazón", description: "Caja x 50 unidades. Empanadas precocidas listas para freír o calentar.", price: 0, image: "/assets/empanadas.png" }
+      { id: "m1", name: "Empanadas Picnic de Carne Molida", description: "Caja x 50 unidades. Empanadas precocidas listas para freír o calentar.", price: 0, image: "/assets/Picnic de Carne Molida.png", popular: true },
+      { id: "m2", name: "Empanadas Picnic de Queso", description: "Caja x 50 unidades. Empanadas precocidas listas para freír o calentar.", price: 0, image: "/assets/Picnic de Queso.png" },
+      { id: "m3", name: "Empanadas Picnic de Pollo", description: "Caja x 50 unidades. Empanadas precocidas listas para freír o calentar.", price: 0, image: "/assets/Picnic de Pollo.png" },
+      { id: "m4", name: "Empanadas Picnic de Cazón", description: "Caja x 50 unidades. Empanadas precocidas listas para freír o calentar.", price: 0, image: "/assets/Picnic de Cazón.png" }
     ]
   }
 ];

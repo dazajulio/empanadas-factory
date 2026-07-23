@@ -57,7 +57,7 @@ export default function FloatingCart() {
           ) : (
             cart.map(item => (
               <div key={item.id} className="cart-item">
-                <div className="cart-item-img" style={{backgroundImage: `url(${item.image})`}}></div>
+                <div className="cart-item-img" style={{backgroundImage: `url("${item.image}")`}}></div>
                 <div className="cart-item-info">
                   <h4>{item.name}</h4>
                   <div className="cart-item-controls">

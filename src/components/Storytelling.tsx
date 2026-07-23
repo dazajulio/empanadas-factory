@@ -16,8 +16,8 @@ export default function Storytelling() {
                   </div>
               </div>
               <div className="story-image-container" style={{textAlign: 'center'}}>
-                  {/* Placeholder for the diploma image */}
-                  <video src="/assets/Conoce más sobre nuestra historia.mp4#t=0.001" controls preload="metadata" className="rounded-image shadow-large" style={{maxWidth: '80%', margin: '0 auto', display: 'block'}}></video>
+                  {/* Video HERO2 con controles y portada del segundo 1 */}
+                  <video src="/assets/HERO2.mp4#t=1.0" controls preload="metadata" className="rounded-image shadow-large" style={{maxWidth: '80%', margin: '0 auto', display: 'block'}}></video>
               </div>
           </div>
           

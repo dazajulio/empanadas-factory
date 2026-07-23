@@ -2,9 +2,11 @@
 import { useEffect, useState } from 'react';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,8 +16,11 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isDarkBg = pathname === '/menu';
+  const navClass = `${scrolled ? 'scrolled' : ''} ${isDarkBg && !scrolled ? 'navbar-dark-bg' : ''}`.trim();
+
   return (
-    <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
+    <nav id="navbar" className={navClass}>
       <div className="nav-container">
         <Link href="/" className="logo" style={{textDecoration: 'none'}}>
           <span className="red">EMPANADAS</span>FACTORY

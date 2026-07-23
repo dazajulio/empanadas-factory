@@ -1,4 +1,79 @@
 export default function Quality() {
+  const reviews = [
+    {
+      name: "ARTURO MIER Y TERAN",
+      initials: "A",
+      color: "#4CAF50",
+      stats: "Local Guide·144 opiniones·726 fotos",
+      date: "Hace un mes",
+      tags: "Comida para llevar | Desayuno | $10-20",
+      text: "Muy buenas las empanadas, hechas en el momento, súper crujientes y el sabor de los rellenos excelentes, la de carne mechada y carne molida súper buenas. La atención es muy buena, muy atentas y cordiales. Para ser un foodtruck y estar en un estacionamiento el espacio es agradable, limpio y tienes sus mesas bajo toldos."
+    },
+    {
+      name: "Jose Fernando Serrano",
+      initials: "J",
+      color: "#2196F3",
+      stats: "4 opiniones·2 fotos",
+      date: "Hace un mes",
+      tags: "Consumo en el lugar | Desayuno | $10-20",
+      text: "Excelente servicio, sabor: me recordó a mi Venezuela! El crouch de las empanadas increíble."
+    },
+    {
+      name: "Elizabeth Cristina Barreto",
+      initials: "E",
+      color: "#9C27B0",
+      stats: "9 opiniones·1 foto",
+      date: "Hace un mes",
+      tags: "Consumo en el lugar | Desayuno | $1-10",
+      text: "Su personal muy gentil y el sabor el mas rico son sin duda las mejores empanadas que sigan asi de exelentes"
+    },
+    {
+      name: "charbel el barche",
+      initials: "c",
+      color: "#F44336",
+      stats: "9 opiniones·5 fotos",
+      date: "Hace 5 meses",
+      tags: "",
+      text: "De las mejores empanadas de Miami! La masa es deliciosa y la atención increible! Sin duda se convertira en un sitio constante para mi!"
+    },
+    {
+      name: "Leroy Contreras Bonet",
+      initials: "L",
+      color: "#FF9800",
+      stats: "13 opiniones·1 foto",
+      date: "Hace un mes",
+      tags: "",
+      text: "Las mejores empanadas de Miami y el Doral !! Atención increíble … el Verdadero Sabor de la empanada venezolana localizados en el Doral !! 100% Recomendados"
+    },
+    {
+      name: "Lorena Romero",
+      initials: "L",
+      color: "#E91E63",
+      stats: "8 opiniones·3 fotos",
+      date: "Hace 3 meses",
+      tags: "",
+      text: "Las empanadas de queso venezolanas más ricas de miami. La masa súper finita y crocante. El queso de calidad.Penelope y Adrián súper amables❤️"
+    },
+    {
+      name: "Manuel Salvatierra",
+      initials: "M",
+      color: "#3F51B5",
+      stats: "11 opiniones·2 fotos",
+      date: "Hace 10 meses",
+      tags: "Consumo en el lugar | Desayuno | $1-10",
+      text: "Es la mejor empanada que me he comido desde hace muchos años, súper amables, nos atendieron muy rápido, las empanadas estaban fresquitas crujientes el relleno delicioso! Súper recomendado ."
+    },
+    {
+      name: "Hector Briceño",
+      initials: "H",
+      color: "#009688",
+      stats: "6 opiniones·13 fotos",
+      date: "Hace un mes",
+      tags: "Consumo en el lugar | Desayuno | $1-10",
+      text: "De las mejores empanadas que he comido! Crujientes y con mucho sabor. Además tienen muy buenos precios, el staff es amable y el lugar es agradable para comer 👌🏻"
+    }
+  ];
+
   return (
     <section id="proceso" className="quality" style={{background: 'var(--bg-offwhite)', color: 'var(--text-charcoal)', padding: '8rem 0'}}>
         <div className="container">
@@ -10,45 +85,38 @@ export default function Quality() {
                 
                 {/* Contenido y Reviews del lado derecho */}
                 <div className="quality-content">
-                    <h2 className="title-large" style={{color: 'var(--brand-red-dark)', marginBottom: '1rem', lineHeight: '1.1'}}>EL VEREDICTO DE <br/>NUESTROS <span className="red">CLIENTES</span></h2>
-                    <p style={{fontSize: '1.2rem', marginBottom: '3rem', color: 'var(--text-charcoal)'}}>No lo decimos nosotros. Lo confirman quienes ya han experimentado el verdadero crunch de Venezuela en cada mordisco.</p>
+                    <h2 className="title-large" style={{color: 'var(--brand-red-dark)', marginBottom: '1rem', lineHeight: '1.1', fontSize: '2.5rem'}}>
+                        EL VEREDICTO DE <br/>NUESTROS <span className="red">CLIENTES</span>
+                    </h2>
+                    <p style={{fontSize: '1.1rem', marginBottom: '2rem', color: 'var(--text-charcoal)'}}>
+                        No lo decimos nosotros. Lo confirman quienes ya han experimentado el verdadero crunch de Venezuela en cada mordisco.
+                    </p>
                     
-                    <div className="quality-grid-2x2">
-                        <div className="quality-card" style={{background: 'var(--bg-white)', borderColor: 'rgba(0,0,0,0.05)', color: 'var(--text-dark)', boxShadow: '0 15px 35px rgba(0,0,0,0.05)', padding: '2rem'}}>
-                            <div style={{color: '#FBC02D', marginBottom: '0.5rem'}}>
-                                <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
+                    <div className="google-reviews-container">
+                        {reviews.map((review, idx) => (
+                            <div key={idx} className="google-review-card shadow-small">
+                                <div className="gr-header">
+                                    <div className="gr-avatar" style={{backgroundColor: review.color}}>{review.initials}</div>
+                                    <div className="gr-meta">
+                                        <div className="gr-name">{review.name}</div>
+                                        <div className="gr-date">{review.date}</div>
+                                    </div>
+                                    <div className="gr-google-icon">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" width="18" height="18" />
+                                    </div>
+                                </div>
+                                <div className="gr-stars">
+                                    <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
+                                </div>
+                                <p className="gr-text">{review.text}</p>
                             </div>
-                            <p style={{color: 'var(--text-charcoal)', fontSize: '0.95rem', fontStyle: 'italic', marginBottom: '1rem'}}>"This place is the best empanadas spot in the area, and I'm a Venezuelan living here for more than 25 years. You gotta try it!"</p>
-                            <h3 style={{fontSize: '1.1rem', marginBottom: '0.2rem', fontWeight: 700}}>Yetzabeth A.</h3>
-                            <p style={{fontSize: '0.8rem', color: 'var(--text-light)'}}>04/20/26</p>
-                        </div>
-                        
-                        <div className="quality-card active" style={{background: 'var(--brand-red)', color: 'white', borderColor: 'transparent', transform: 'translateY(-10px)', boxShadow: '0 25px 50px rgba(238, 29, 35, 0.2)', padding: '2rem'}}>
-                            <div style={{color: '#FBC02D', marginBottom: '0.5rem'}}>
-                                <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
-                            </div>
-                            <p style={{color: 'rgba(255,255,255,0.95)', fontSize: '0.95rem', fontStyle: 'italic', marginBottom: '1rem'}}>"Probé por primera vez las empanadas y están buenisimas. Mis nuevas Fav 🤩"</p>
-                            <h3 style={{fontSize: '1.1rem', marginBottom: '0.2rem', color: 'white', fontWeight: 700}}>Roberto C.</h3>
-                            <p style={{fontSize: '0.8rem', color: 'rgba(255,255,255,0.7)'}}>03/08/26</p>
-                        </div>
-                        
-                        <div className="quality-card" style={{background: 'var(--bg-white)', borderColor: 'rgba(0,0,0,0.05)', color: 'var(--text-dark)', boxShadow: '0 15px 35px rgba(0,0,0,0.05)', padding: '2rem'}}>
-                            <div style={{color: '#FBC02D', marginBottom: '0.5rem'}}>
-                                <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
-                            </div>
-                            <p style={{color: 'var(--text-charcoal)', fontSize: '0.95rem', fontStyle: 'italic', marginBottom: '1rem'}}>"The best Empanadas in town. I live far and always order from here even if it takes long to arrive. Absolutely amazing, consistent quality."</p>
-                            <h3 style={{fontSize: '1.1rem', marginBottom: '0.2rem', fontWeight: 700}}>Shimon C.</h3>
-                            <p style={{fontSize: '0.8rem', color: 'var(--text-light)'}}>03/22/26</p>
-                        </div>
-                        
-                        <div className="quality-card" style={{background: 'var(--bg-white)', borderColor: 'rgba(0,0,0,0.05)', color: 'var(--text-dark)', boxShadow: '0 15px 35px rgba(0,0,0,0.05)', padding: '2rem'}}>
-                            <div style={{color: '#FBC02D', marginBottom: '0.5rem'}}>
-                                <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
-                            </div>
-                            <p style={{color: 'var(--text-charcoal)', fontSize: '0.95rem', fontStyle: 'italic', marginBottom: '1rem'}}>"Estas empanadas son mundiales 🤤"</p>
-                            <h3 style={{fontSize: '1.1rem', marginBottom: '0.2rem', fontWeight: 700}}>TEDDY R.</h3>
-                            <p style={{fontSize: '0.8rem', color: 'var(--text-light)'}}>05/18/26</p>
-                        </div>
+                        ))}
+                    </div>
+
+                    <div style={{marginTop: '1.5rem'}}>
+                         <a href="https://www.google.com/maps/place/Empanadas+Factory/@25.8315121,-80.3429396,17z/data=!4m8!3m7!1s0x88d9bbae92120e29:0xe89eb302ff4b24e6!8m2!3d25.8315073!4d-80.3403647!9m1!1b1!16s%2Fg%2F11vz20_17b?entry=ttu" target="_blank" rel="noopener noreferrer" className="gr-all-reviews-btn">
+                            Ver todas las opiniones <i className="fas fa-arrow-right" style={{marginLeft: '0.5rem'}}></i>
+                         </a>
                     </div>
                 </div>
             </div>

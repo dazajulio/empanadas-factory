@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Storytelling from '@/components/Storytelling';
+import SocialBanner from '@/components/SocialBanner';
 import Quality from '@/components/Quality';
 import Gallery from '@/components/Gallery';
 import Locations from '@/components/Locations';
@@ -17,6 +18,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Storytelling />
+      <SocialBanner />
       <Quality />
       <Gallery />
       <Locations />

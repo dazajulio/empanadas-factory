@@ -1,3 +1,4 @@
+'use client';
 export default function SocialBanner() {
   return (
     <section className="social-banner" style={{

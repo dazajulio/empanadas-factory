@@ -18,40 +18,48 @@ export default function Locations() {
                 <video src="/assets/Cazon.mp4" autoPlay loop muted playsInline className="rounded-image" style={{width: '100%', height: '100%', objectFit: 'cover'}}></video>
             </div>
             
-            <div className="locations-cards" style={{display: 'flex', flexDirection: 'column', gap: '1.5rem', justifyContent: 'center'}}>
+            <div className="locations-cards" style={{
+                display: 'grid', 
+                gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', 
+                gap: '1.5rem', 
+                alignContent: 'center'
+            }}>
                 {locations.map((loc, idx) => (
                     <a key={idx} href={loc.url} target="_blank" rel="noopener noreferrer" className="location-card shadow-small" style={{
-                        textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: '1.5rem',
-                        padding: '1.5rem 2rem', borderRadius: '12px', background: 'white', position: 'relative',
+                        textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', gap: '1rem',
+                        padding: '1.5rem', borderRadius: '16px', position: 'relative',
                         overflow: 'hidden', border: '1px solid rgba(0,0,0,0.05)',
+                        aspectRatio: '1 / 1', /* Tarjetas cuadradas */
                         transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-                    }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-5px)'; e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)'; }}>
+                    }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-5px)'; e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.15)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)'; }}>
                         
-                        {/* Fondo estilo mapa */}
+                        {/* Fondo con imagen de mapa generada */}
                         <div style={{
                             position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
-                            backgroundImage: 'linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px)',
-                            backgroundSize: '20px 20px',
+                            backgroundImage: 'url(/assets/map_bg.jpg)',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            opacity: 0.6, /* Transparencia para que el texto resalte */
                             zIndex: 0
                         }}></div>
                         
-                        {/* Marca de agua */}
-                        <i className="fas fa-map-marked-alt" style={{
-                            position: 'absolute', right: '-5%', bottom: '-20%', fontSize: '8rem', color: 'rgba(220, 38, 38, 0.04)', zIndex: 0
-                        }}></i>
+                        {/* Capa de oscurecimiento suave para mejorar lectura */}
+                        <div style={{
+                            position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+                            backgroundColor: 'rgba(255,255,255,0.7)',
+                            zIndex: 1
+                        }}></div>
                         
                         <div style={{
-                            width: '50px', height: '50px', borderRadius: '50%', background: 'var(--brand-red)', color: 'white',
-                            display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', flexShrink: 0, zIndex: 1
+                            width: '60px', height: '60px', borderRadius: '50%', background: 'var(--brand-red)', color: 'white',
+                            display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.8rem', flexShrink: 0, zIndex: 2,
+                            boxShadow: '0 4px 10px rgba(220, 38, 38, 0.3)'
                         }}>
                             <i className="fas fa-map-marker-alt"></i>
                         </div>
-                        <div style={{zIndex: 1, flexGrow: 1}}>
-                            <h3 style={{margin: '0 0 0.3rem 0', fontSize: '1.4rem', color: 'var(--text-dark)'}}>{loc.name}</h3>
-                            <p style={{margin: 0, color: 'var(--text-charcoal)', lineHeight: '1.4'}}>{loc.address}<br/>{loc.city}</p>
-                        </div>
-                        <div style={{zIndex: 1, color: 'var(--brand-red)'}}>
-                            <i className="fas fa-external-link-alt"></i>
+                        <div style={{zIndex: 2, flexGrow: 0}}>
+                            <h3 style={{margin: '0 0 0.5rem 0', fontSize: '1.6rem', color: 'var(--text-dark)', fontWeight: '900'}}>{loc.name}</h3>
+                            <p style={{margin: 0, color: 'var(--text-charcoal)', lineHeight: '1.4', fontWeight: '500'}}>{loc.address}<br/>{loc.city}</p>
                         </div>
                     </a>
                 ))}

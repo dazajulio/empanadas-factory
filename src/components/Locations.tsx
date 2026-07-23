@@ -51,11 +51,10 @@ export default function Locations() {
                         }}></div>
                         
                         <div style={{
-                            width: '60px', height: '60px', borderRadius: '50%', background: 'var(--brand-red)', color: 'white',
-                            display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.8rem', flexShrink: 0, zIndex: 2,
-                            boxShadow: '0 4px 10px rgba(220, 38, 38, 0.3)'
+                            width: '70px', height: '70px', flexShrink: 0, zIndex: 2,
+                            display: 'flex', alignItems: 'center', justifyContent: 'center'
                         }}>
-                            <i className="fas fa-map-marker-alt"></i>
+                            <img src="/assets/truck.png" alt="Food Truck" style={{width: '100%', height: '100%', objectFit: 'contain', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.2))'}} />
                         </div>
                         <div style={{zIndex: 2, flexGrow: 0}}>
                             <h3 style={{margin: '0 0 0.5rem 0', fontSize: '1.6rem', color: 'var(--text-dark)', fontWeight: '900'}}>{loc.name}</h3>

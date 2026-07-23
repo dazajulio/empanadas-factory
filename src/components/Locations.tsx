@@ -15,7 +15,7 @@ export default function Locations() {
         
         <div className="container grid-2" style={{alignItems: 'stretch'}}>
             <div className="locations-video shadow-large" style={{borderRadius: '16px', overflow: 'hidden', minHeight: '400px'}}>
-                <video src="/assets/Cazon.mp4" autoPlay loop muted playsInline className="rounded-image" style={{width: '100%', height: '100%', objectFit: 'cover'}}></video>
+                <video src="/assets/Cazon.mp4" autoPlay loop muted playsInline controls className="rounded-image" style={{width: '100%', height: '100%', objectFit: 'cover'}}></video>
             </div>
             
             <div className="locations-cards" style={{

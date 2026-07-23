@@ -51,8 +51,9 @@ export default function Locations() {
                         }}></div>
                         
                         <div style={{
-                            width: '100px', height: '100px', flexShrink: 0, zIndex: 2,
-                            display: 'flex', alignItems: 'center', justifyContent: 'center'
+                            width: '150px', height: '150px', flexShrink: 0, zIndex: 2,
+                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            marginTop: '-1rem' /* Ajuste ligero para que no desplace tanto el texto */
                         }}>
                             <img src="/assets/truck.png" alt="Food Truck" style={{width: '100%', height: '100%', objectFit: 'contain', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.2))'}} />
                         </div>
